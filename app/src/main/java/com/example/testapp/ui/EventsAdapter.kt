@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.testapp.R
+import com.example.testapp.VideoDialog
 
 class EventsAdapter : RecyclerView.Adapter<EventsAdapter.EventViewHolder>() {
 
@@ -48,6 +49,10 @@ class EventsAdapter : RecyclerView.Adapter<EventsAdapter.EventViewHolder>() {
                 .load(eventUiState.imageUrl)
                 .into(imageView)
 
+            itemView.setOnClickListener {
+                val videoDialog = VideoDialog(it.context, eventUiState.videoUrl)
+                videoDialog.show()
+            }
         }
     }
 }
