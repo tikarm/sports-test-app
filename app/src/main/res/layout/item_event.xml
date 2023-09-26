@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_event_image"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toStartOf="@id/ll_event"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_event"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_event_image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:id="@+id/tv_title_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Man United vs Juventus" />
+
+        <TextView
+            android:id="@+id/tv_subtitle_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Champions League" />
+
+        <TextView
+            android:id="@+id/tv_date_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Yesterday, 10:30" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
