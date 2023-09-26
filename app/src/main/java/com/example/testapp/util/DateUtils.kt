@@ -30,7 +30,7 @@ object DateUtils {
             } else if (isSameDay(date, yesterday.time)) {
                 "Yesterday ${dateFormat.format(date)}"
             } else {
-                val outputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                val outputFormat = SimpleDateFormat("yyyy.MM.dd", Locale.getDefault())
                 outputFormat.format(date)
             }
         } catch (e: Exception) {
